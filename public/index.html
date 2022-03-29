@@ -7,7 +7,92 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Плагин</h1>
+  <div class="container">
+    <h1>Плагин</h1>
+    <div id="plugin" class="dostavka-info mt-3">
+      <!-- Form -->
+      <form class="dostavka-info__form">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Откуда" readonly>
+          <span class="input-group-text"></span>
+          <input type="text" class="form-control" placeholder="Куда" readonly>
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Выберите размер</button>
+          <ul class="dropdown-menu dropdown-menu-end select-size">
+            <li><a class="dropdown-item select-size__item" data-size="envelopment"><img src="/static/img/envelope-icon.png" alt="" width="32"> <span style="margin-left:10px">Документы <span class="text-muted d-block">30x22x1 см, до 200 гр</span></span></a></li>
+            <li><a class="dropdown-item select-size__item" data-size="xs"><img src="/static/img/box-icon.png" alt="" width="32"> <span style="margin-left:10px">Как коробка от смартфона <span class="text-muted d-block">17x12x9 см, до 1 кг</span></span></a></li>
+            <li><a class="dropdown-item select-size__item" data-size="s"><img src="/static/img/box-icon.png" alt="" width="32"> <span style="margin-left:10px">Как коробка от утюга <span class="text-muted d-block">21x20x11 см, до 3 кг</span></span></a></li>
+            <li><a class="dropdown-item select-size__item" data-size="m"><img src="/static/img/box-icon.png" alt="" width="32"> <span style="margin-left:10px">Как коробка от обуви <span class="text-muted d-block">33x25x15 см, до 7 кг</span></span></a></li>
+            <li><a class="dropdown-item select-size__item" data-size="l"><img src="/static/img/box-icon.png" alt="" width="32"> <span style="margin-left:10px">Как коробка от микроволновки <span class="text-muted d-block">42x35x30 см, до 15 кг</span></span></a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item js-exact-size" href="#advancedSettings" data-bs-toggle="collapse">Я знаю точные размеры</a></li>
+          </ul>
+          <button class="btn btn-primary" type="button">Показать варианты</button>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="courierBring">
+          <label class="form-check-label" for="courierBring">
+            Курьер привезёт
+          </label>
+        </div>
+      </form>
+      <!-- .Form -->
+
+      <!-- Results -->
+      <div class="mt-3 d-none">
+        <div class="btn-group mb-3" role="group" aria-label="Basic checkbox toggle button group">
+          <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" checked>
+          <label class="btn btn-outline-primary" for="btncheck1">Дешевле</label>
+        
+          <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+          <label class="btn btn-outline-primary" for="btncheck2">Быстрее</label>
+        </div>
+        <p class="text-info">День забора груза не учитывается</p>
+
+        <div class="alert alert-warning">По вашему запросу нет результатов</div>
+
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+
+        <div class="mb-3">
+          <div class="row">
+            <input type="hidden" value="" class="js-data">
+            <div class="col">
+              <div>
+                <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
+                <div><strong>3600</strong> <span class="text-muted">руб</span></div>
+                <div><strong>5</strong> <span class="text-muted">дн</span></div>
+              </div>
+            </div>
+            <div class="col">
+              <div><img src="https://dostavka.info/static/img/logo/pochta.png" alt=""></div>
+              <button class="btn btn-primary" type="button">Продолжить</button>
+            </div>
+          </div>
+          <div class="row">
+            <input type="hidden" value="" class="js-data">
+            <div class="col">
+              <div>
+                <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
+                <div><strong>3600</strong> <span class="text-muted">руб</span></div>
+                <div><strong>5</strong> <span class="text-muted">дн</span></div>
+              </div>
+            </div>
+            <div class="col">
+              <div><img src="https://dostavka.info/static/img/logo/dpd.png" alt=""></div>
+              <button class="btn btn-primary" type="button">Продолжить</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- .Results -->
+
+    </div>
+  </div>
+  
   <script src="main.bundle.js"></script>
 </body>
 </html>
